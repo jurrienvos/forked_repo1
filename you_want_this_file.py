@@ -1,15 +1,9 @@
-#mod1
-#mod2
-#mod3
-#mod4
-#mod5
-#mod6
+def greet():
+    print("Hello, world!")
+greet()
 
-#mod7
 
-#mod8
-
-#mod9
-
-#gorka1
-#gorka2
+def add(a,b):
+    return a+b
+result=add(2,3)
+print("result =",result)
