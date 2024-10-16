@@ -43,12 +43,20 @@ except CustomError as e:
     print(e)
 
 
-tuples = ("apple", "banana", "cherry")
 
 fruits = ["apple", "banana", "cherry"] #dit is een lijst
 
 tuples = ("apple", "banana", "cherry")
 
+
+
+
+
+
+
+def multiply(a,b,c):
+    return a*b+2*c
+print(multiply(4,4,3))
 
 
 
