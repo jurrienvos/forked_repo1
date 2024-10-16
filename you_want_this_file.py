@@ -43,13 +43,6 @@ except CustomError as e:
     print(e)
 
 
-#extra lines
-#extra lines2
-#JA
-#addition
-#DEZE COMMIT
 
-#addition
-#DEZE COMMIT
 
 
