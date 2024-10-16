@@ -42,7 +42,7 @@ try:
 except CustomError as e:
     print(e)
 
-
+tuples = ("apple", "banana", "cherry")
 
 fruits = ["apple", "banana", "cherry"] #dit is een lijst
 
