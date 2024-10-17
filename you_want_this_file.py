@@ -62,4 +62,6 @@ print(multiply(4,4,3))
 list=[x*y for x in range(0,3) for y in range(0,3)]
 print(list)
 
-
+def bark(self):
+    return "Woof!"
+print(bark(self=10))
