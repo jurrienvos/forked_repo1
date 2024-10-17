@@ -45,4 +45,6 @@ except CustomError as e:
 
 
 
-
+def bark(self):
+    return "Woof!"
+print(bark(self=10))
