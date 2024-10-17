@@ -66,3 +66,7 @@ def bark(self):
 print(bark(self=10))
 
 #line
+
+
+name='henk'
+print(f'hoi,{name}')
