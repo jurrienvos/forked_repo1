@@ -53,7 +53,6 @@ tuples = ("apple", "banana", "cherry")
 
 
 
-
 def multiply(a,b,c):
     return a*b+2*c
 print(multiply(4,4,3))
