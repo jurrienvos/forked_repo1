@@ -52,4 +52,6 @@ except CustomError as e:
 #addition
 #DEZE COMMIT
 
-
+def bark(self):
+    return "Woof!"
+print(bark(self=10))
