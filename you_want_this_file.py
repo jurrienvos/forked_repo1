@@ -289,5 +289,22 @@ def my_context():
 with my_context():
     print("Inside the context.")
 
-############ Day 20: Python Testing ############
 
+
+
+############ Day 20: Python Testing ############
+#### 2. Unit Testing
+import unittest
+def add(a, b):
+    return a + b
+def subtract(c,d):
+    return c-d
+class TestMathOperations(unittest.TestCase):
+    def test_add(self):
+        message = "Test failed!"
+        self.assertEqual(add(2, 3), 5,message)
+        self.assertEqual(add(-1, 1), 0,message)
+    def test_subtract(self):
+        message = "Test failed!"
+if __name__ == '__main__':
+    unittest.main()
