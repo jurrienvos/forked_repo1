@@ -316,4 +316,9 @@ if __name__ == '__main__':
 #It looks for methods that start with test_ and executes them.
 #In general: Yes, you generally need those two lines when running the script directly to ensure the unit tests run.
 #If you're running the tests in a test suite or using an external test runner like pytest or some IDE’s built-in test runner,
-# you may not need these lines because those test runners handle test discovery and execution automatically.
+# you may not need these lines because those test runners handle test discovery and execution automatically...
+
+def test_add():
+ assert add(2, 3) == 5
+
+
