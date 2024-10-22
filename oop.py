@@ -75,6 +75,8 @@ print(my_mens.human_traits())
 #     def speak(self):
 #         return "Animal speaks"
 # class Dog(Animal):
+# you can have parentheses () after the class name in the class definition.
+# These parentheses are used to specify inheritance, meaning they define the parent class or classes that the new class inherits from.
 #     def bark(self):
 #         return "Woof!"
 # my_dog = Dog()
@@ -87,3 +89,18 @@ print(my_mens.human_traits())
 
 #############################################################################################################
 ###################### https://www.w3resource.com/python-exercises/oop/index.php ############################
+#1. Write a Python program to create a class representing a Circle. Include methods to calculate its area and perimeter.
+
+# from sympy
+# print(float(pi))
+
+
+class circle:
+    def __init__(self, radius):
+        self.radius=radius
+    def area(self):
+        return 3.14*self.radius**2
+    def perimeter(self):
+        return 2*3.14*self.radius
+my_circle=circle(2)
+print(my_circle.area())
