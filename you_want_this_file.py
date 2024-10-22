@@ -81,40 +81,35 @@ print("hoi",name)
 
 
 ###################### OOP #############################
-#2. Creating an Object
+#1. What is a Class?
 class Dog:
     def bark(self):
         return "Woof!"
+#2. Creating an Object
 my_dog = Dog()
 print(my_dog.bark()) # Output: Woof!
 
 
 
-
-
-# 3. Attributes
+#3. Attributes
 class Dog:
     def __init__(self, name, age):
         self.name = name
         self.age = age
-
 my_dog = Dog("Buddy", 5)
 print(my_dog.name) # Output: Buddy
+
 #4. Methods
 class Dog:
     def __init__(self, name, age):
         self.name = name
         self.age = age
     def bark(self):
-        return f"{self.name} who is {self.age} years old says Woof!"
-
-my_dog = Dog("Buddy",3)
+        return f"{self.name} says Woof!"
+my_dog = Dog("Buddy", 5)
 print(my_dog.bark()) # Output: Buddy says Woof!
 
-
-
-
-#### 5. Inheritance
+#5. Inheritance
 class Animal:
     def speak(self):
         return "Animal speaks"
@@ -122,7 +117,19 @@ class Dog(Animal):
     def bark(self):
         return "Woof!"
 my_dog = Dog()
-print('INHERITANCE',my_dog.speak()) # Output: Animal speaks
+print(my_dog.speak()) # Output: Animal speaks
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
