@@ -1,3 +1,4 @@
 # Unpinned dependencies
 numpy
 pandas
+polars
