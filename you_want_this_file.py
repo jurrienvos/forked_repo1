@@ -301,13 +301,31 @@ def subtract(c,d):
     return c-d
 class TestMathOperations(unittest.TestCase):
     def test_add(self):
-        message = "Test failed!"
-        self.assertEqual(add(2, 3), 5,message)
-        self.assertEqual(add(-1, 1), 0,message)
+        message = "+ Test failed!"
+        self.assertEqual(add(2, 3),5,message)
+        self.assertEqual(add(-1, 1),0,message)
     def test_subtract(self):
-        message = "Test failed!"
+        message = "- Test failed!"
+        self.assertEqual(subtract(5,3),2,message)
+        self.assertEqual(subtract(6, 3), 3, message)
 if __name__ == '__main__':
+#This line checks if the script is being run directly (as opposed to being imported as a module in another script).
+#When you run a Python script, the special variable __name__ is automatically set to "__main__" if the script is the entry point of execution.
+#If the script is imported into another file, __name__ will be set to the name of the module, and the block of code inside this if statement won’t run.
     unittest.main()
+
+#It looks for methods that start with test_ and executes them.
+#In general: Yes, you generally need those two lines when running the script directly to ensure the unit tests run.
+#If you're running the tests in a test suite or using an external test runner like pytest or some IDE’s built-in test runner,
+# you may not need these lines because those test runners handle test discovery and execution automatically...
+
+def test_add():
+ assert add(2, 3) == 5
+
+###
+
+
 
 
 ###
+
