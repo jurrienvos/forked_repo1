@@ -110,3 +110,8 @@ class circle:
         return 2*3.14*self.radius
 my_circle=circle(2)
 print(my_circle.area())
+
+
+
+
+#2. Write a Python program to create a person class. Include attributes like name, country and date of birth. Implement a method to determine the person's age.
