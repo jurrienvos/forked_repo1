@@ -1,5 +1,5 @@
 # Unpinned dependencies
 numpy
-pandas
-polars
 sympy
+polars
+pandas

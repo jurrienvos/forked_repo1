@@ -91,8 +91,14 @@ print(my_mens.human_traits())
 ###################### https://www.w3resource.com/python-exercises/oop/index.php ############################
 #1. Write a Python program to create a class representing a Circle. Include methods to calculate its area and perimeter.
 
-# from sympy
-# print(float(pi))
+import
+print(float(pi))
+
+
+
+
+
+
 
 
 class circle:
