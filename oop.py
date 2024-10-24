@@ -247,25 +247,56 @@ class Calculator:
 # Example usage
 # Create an instance of the Calculator class
 calculator = Calculator()
-
-# Perform addition and print the result
 result = calculator.add(7, 5)
 print("7 + 5 =", result)
-
-# Perform subtraction and print the result
 result = calculator.subtract(34, 21)
 print("34 - 21 =", result)
-
-# Perform multiplication and print the result
 result = calculator.multiply(54, 2)
 print("54 * 2 =", result)
-
-# Perform division and print the result
 result = calculator.divide(144, 2)
 print("144 / 2 =", result)
-
-# Attempt to perform division by zero, which raises an error, and print the error message
 result = calculator.divide(45, 0)
 print("45 / 0 =", result)
 
-# ! hier duidelijk het verschil tussen gebruik van def__init__ en niet gebruik ervan.
+# ! in deze exercise een duidelijk verschil tussen gebruik van def__init__ en niet gebruik ervan.
+
+
+
+
+
+
+
+
+# 4. Write a Python program to create a class that represents a shape.
+# Include methods to calculate its area and perimeter. Implement subclasses for different shapes like circle, triangle, and square.
+
+#my attempt
+
+from sympy import pi
+#circle area=pi*r^2, perimeter=2*pi*r
+#triangle area=0.5*base*height, perimeter=a+b+c
+#square area=l*l, perimeter=4*l
+class shape:
+    class circle:
+        def area(self,r):
+            return pi*r**2
+        def perimeter(self,r):
+            return 2*pi*r
+    class triangle:
+        def area(self,base,height):
+            return 0.5*base*height
+        def perimeter(self,a,b,c):
+            return a+b+c
+    class square:
+        def area(self,l):
+            return l**2
+        def perimeter(self,l):
+            return l*4
+mycircle=shape().circle()
+print(f'area of circle={mycircle.area(2)}')
+
+
+
+
+
+
