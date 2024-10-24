@@ -293,10 +293,160 @@ class shape:
         def perimeter(self,l):
             return l*4
 mycircle=shape().circle()
-print(f'area of circle={mycircle.area(2)}')
+mytriangle=shape().triangle()
+mysquare=shape().square()
+print(f'area circle={mycircle.area(2)},perimeter circle={mycircle.perimeter(2)}')
+print(f'area triangle={mytriangle.area(2,3)},perimeter triangle={mytriangle.perimeter(2,3,4)}')
+print(f'area square={mysquare.area(2)},perimeter square={mysquare.perimeter(2)}')
 
+#answer:
 
+# import math
+# # Define a base class called Shape to represent a generic shape with methods for calculating area and perimeter
+# class Shape:
+# # Shape is the base class (or parent class) that defines general methods (calculate_area and calculate_perimeter)
+# # which are meant to be overridden by its derived classes (or child classes).
+# # In this case, the base class doesn't provide actual implementations, but instead, it acts as a blueprint for the specific shapes (Circle, Rectangle, Triangle).
+#     # Placeholder method for calculating area (to be implemented in derived classes)
+#     def calculate_area(self):
+#         pass
+#     # Placeholder method for calculating perimeter (to be implemented in derived classes)
+#     def calculate_perimeter(self):
+#         pass
+# # Define a derived class called Circle, which inherits from the Shape class
+# class Circle(Shape):
+# # Circle, Rectangle, and Triangle are derived classes that inherit from the Shape class.
+#     # Initialize the Circle object with a given radius
+#     def __init__(self, radius):
+#         self.radius = radius
+#     # Calculate and return the area of the circle using the formula: π * r^2
+#     def calculate_area(self):
+#         return math.pi * self.radius**2
+#     # Calculate and return the perimeter of the circle using the formula: 2π * r
+#     def calculate_perimeter(self):
+#         return 2 * math.pi * self.radius
+# class Rectangle(Shape):
+#     # Initialize the Rectangle object with given length and width
+#     def __init__(self, length, width):
+#         self.length = length
+#         self.width = width
+#     # Calculate and return the area of the rectangle using the formula: length * width
+#     def calculate_area(self):
+#         return self.length * self.width
+#     # Calculate and return the perimeter of the rectangle using the formula: 2 * (length + width)
+#     def calculate_perimeter(self):
+#         return 2 * (self.length + self.width)
+# class Triangle(Shape):
+#     # Initialize the Triangle object with a base, height, and three side lengths
+#     def __init__(self, base, height, side1, side2, side3):
+#         self.base = base
+#         self.height = height
+#         self.side1 = side1
+#         self.side2 = side2
+#         self.side3 = side3
+#     # Calculate and return the area of the triangle using the formula: 0.5 * base * height
+#     def calculate_area(self):
+#         return 0.5 * self.base * self.height
+#     # Calculate and return the perimeter of the triangle by adding the lengths of its three sides
+#     def calculate_perimeter(self):
+#         return self.side1 + self.side2 + self.side3
+# # Purpose of Inheritance:
+# # Code Reusability: You define general methods in the base class (Shape) and reuse these in all the derived classes
+# # (Circle, Rectangle, Triangle). This prevents code duplication.
+# # Polymorphism: You can write code that works with the Shape base class and its methods (calculate_area and calculate_perimeter),
+# # and this same code will work for any shape (circle, rectangle, triangle), because each shape implements these methods in its own way.
+# r = 7
+# circle = Circle(r)
+# circle_area = circle.calculate_area()
+# circle_perimeter = circle.calculate_perimeter()
+# # Print the results for the Circle
+# print("Radius of the circle:", r)
+# print("Circle Area:", circle_area)
+# print("Circle Perimeter:", circle_perimeter)
+# # Create a Rectangle object with given length and width and calculate its area and perimeter
+# l = 5
+# w = 7
+# rectangle = Rectangle(l, w)
+# rectangle_area = rectangle.calculate_area()
+# rectangle_perimeter = rectangle.calculate_perimeter()
+# # Print the results for the Rectangle
+# print("\nRectangle: Length =", l, " Width =", w)
+# print("Rectangle Area:", rectangle_area)
+# print("Rectangle Perimeter:", rectangle_perimeter)
+# # Create a Triangle object with a base, height, and three side lengths, and calculate its area and perimeter
+# base = 5
+# height = 4
+# s1 = 4
+# s2 = 3
+# s3 = 5
+# # Print the results for the Triangle
+# print("\nTriangle: Base =", base, " Height =", height, " side1 =", s1, " side2 =", s2, " side3 =", s3)
+# triangle = Triangle(base, height, s1, s2, s3)
+# triangle_area = triangle.calculate_area()
+# triangle_perimeter = triangle.calculate_perimeter()
+# print("Triangle Area:", triangle_area)
+# print("Triangle Perimeter:", triangle_perimeter)
 
+#answer, with added piece from gtp:
 
+import math
+class Shape:
+# Shape is the base class (or parent class) that defines general methods (calculate_area and calculate_perimeter)
+# which are meant to be overridden by its derived classes (or child classes).
+# In this case, the base class doesn't provide actual implementations, but instead, it acts as a blueprint for the specific shapes (Circle, Rectangle, Triangle).
+    # Placeholder method for calculating area (to be implemented in derived classes)
+    def calculate_area(self):
+        pass
+    # Placeholder method for calculating perimeter (to be implemented in derived classes)
+    def calculate_perimeter(self):
+        pass
+# Define a derived class called Circle, which inherits from the Shape class
+class Circle(Shape):
+# Circle, Rectangle, and Triangle are derived classes that inherit from the Shape class.
+    # Initialize the Circle object with a given radius
+    def __init__(self, radius):
+        self.radius = radius
+    # Calculate and return the area of the circle using the formula: π * r^2
+    def calculate_area(self):
+        return math.pi * self.radius**2
+    # Calculate and return the perimeter of the circle using the formula: 2π * r
+    def calculate_perimeter(self):
+        return 2 * math.pi * self.radius
+class Rectangle(Shape):
+    # Initialize the Rectangle object with given length and width
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+    # Calculate and return the area of the rectangle using the formula: length * width
+    def calculate_area(self):
+        return self.length * self.width
+    # Calculate and return the perimeter of the rectangle using the formula: 2 * (length + width)
+    def calculate_perimeter(self):
+        return 2 * (self.length + self.width)
+class Triangle(Shape):
+    # Initialize the Triangle object with a base, height, and three side lengths
+    def __init__(self, base, height, side1, side2, side3):
+        self.base = base
+        self.height = height
+        self.side1 = side1
+        self.side2 = side2
+        self.side3 = side3
+    # Calculate and return the area of the triangle using the formula: 0.5 * base * height
+    def calculate_area(self):
+        return 0.5 * self.base * self.height
+    # Calculate and return the perimeter of the triangle by adding the lengths of its three sides
+    def calculate_perimeter(self):
+        return self.side1 + self.side2 + self.side3
+def print_area(area: Shape, perimeter: Shape):
+    print(f'The area is: {area.calculate_area()} and the perimeter is: {perimeter.calculate_perimeter()}')
+circle_area = Circle(5)
+circle_perimeter = Circle(7)
+rectangle_area = Rectangle(4, 6)
+rectangle_perimeter = Rectangle(4, 6)
+triangle_area = Triangle(30, 4, 3, 4, 5)
+triangle_perimeter = Triangle(6, 4, 80, 40, 50)
+print_area(circle_area,circle_perimeter)       # Works with Circle
+print_area(rectangle_area,rectangle_perimeter)    # Works with Rectangle
+print_area(triangle_area,triangle_perimeter)     # Works with Triangle
 
 
