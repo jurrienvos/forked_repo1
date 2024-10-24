@@ -153,11 +153,18 @@ class person:
     def determine_age(self):
         currentdate = date.today()
         age=currentdate.year - self.dob.year
+        # if currentdate.month < self.dob.month: dit is goed maar je moet ook de dag meenemen
+        if currentdate < date(currentdate.year, self.dob.month,self.dob.day):
+            # return age - 1
+            age = age - 1
+        else:
+            age = age
         return age
+
         # return f'{self.name} born in {self.country} has the age of {self.age}.'
 #let op: statements als self.name gebruik je binnen de def, niet erbuiten.
 #erbuiten gebruik je de instance en access je de attribute zoals hieronder.
-my_person = person("Henk","NL",date(1990,12,1))
+my_person = person("jur","NL",date(1993,9,27))
 print(f'{my_person.name} born in {my_person.country} has dob {my_person.dob} and the age of {my_person.determine_age()}')
 # ! when referencing the method without parentheses like doing my_person.determine_age,
 # you are not actually calling the method to compute the age. Instead, you're simply referencing the method itself.
