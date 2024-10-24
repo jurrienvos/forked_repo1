@@ -164,9 +164,108 @@ class person:
         # return f'{self.name} born in {self.country} has the age of {self.age}.'
 #let op: statements als self.name gebruik je binnen de def, niet erbuiten.
 #erbuiten gebruik je de instance en access je de attribute zoals hieronder.
-my_person = person("jur","NL",date(1993,9,27))
+my_person = person("jur","NL",date(1993,12,27))
 print(f'{my_person.name} born in {my_person.country} has dob {my_person.dob} and the age of {my_person.determine_age()}')
 # ! when referencing the method without parentheses like doing my_person.determine_age,
 # you are not actually calling the method to compute the age. Instead, you're simply referencing the method itself.
 # my_person is an instance of the Person class.
 # When you access my_person.name, you're accessing the 'name' attribute of that specific instance.
+
+
+# 3. Write a Python program to create a calculator class. Include methods for basic arithmetic operations.
+
+#my attempt:
+
+class calculator:
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+    def addition(self):
+        return self.a+self.b
+    def substraction(self):
+        if self.a < self.b:
+            # print(f'only allow positive numbers') #with this line, I was still getting a 5th output: substraction None
+            return "only allow positive numbers"
+        else:
+            return self.a-self.b
+    def multipy(self):
+        return self.a * self.b
+    def division(self):
+        if self.b != 0:
+            return self.a / self.b
+        else:
+            return "no division by 0 is allowed"
+myfunc=calculator(1,0)
+print(f'addition: {myfunc.addition()}')
+print(f'substraction: {myfunc.substraction()}')
+print(f'multiply: {myfunc.multipy()}')
+print(f'division: {myfunc.division()}')
+
+#after reading answer, and now converting my code above to a version without def__init__:
+
+class calculator:
+    # def __init__(self,a,b):
+    #     self.a=a
+    #     self.b=b
+    def addition(self,a,b):
+        return a+b
+    def substraction(self,a,b):
+        if a < b:
+            # print(f'only allow positive numbers') #with this line, I was still getting a 5th output: substraction None
+            return "only allow positive numbers"
+        else:
+            return a-b
+    def multipy(self,a,b):
+        return a * b
+    def division(self,a,b):
+        if b != 0:
+            return a / b
+        else:
+            return "no division by 0 is allowed"
+myfunc=calculator()
+print(f'addition: {myfunc.addition(1,0)}')
+print(f'substraction: {myfunc.substraction(1,0)}')
+print(f'multiply: {myfunc.multipy(1,0)}')
+print(f'division: {myfunc.division(1,0)}')
+# in principe kun je nu dus 4 verschillende waarden gebruiken itt attempt 1 omdat je nu niet de attributes hebt ge-initialized met def__init__
+
+#answer:
+
+# Define a class called Calculator to perform basic arithmetic operations
+class Calculator:
+    def add(self, x, y):
+        return x + y
+    def subtract(self, x, y):
+        return x - y
+    def multiply(self, x, y):
+        return x * y
+    def divide(self, x, y):
+        if y != 0:
+            return x / y
+        else:
+            return ("Cannot divide by zero.")
+# Example usage
+# Create an instance of the Calculator class
+calculator = Calculator()
+
+# Perform addition and print the result
+result = calculator.add(7, 5)
+print("7 + 5 =", result)
+
+# Perform subtraction and print the result
+result = calculator.subtract(34, 21)
+print("34 - 21 =", result)
+
+# Perform multiplication and print the result
+result = calculator.multiply(54, 2)
+print("54 * 2 =", result)
+
+# Perform division and print the result
+result = calculator.divide(144, 2)
+print("144 / 2 =", result)
+
+# Attempt to perform division by zero, which raises an error, and print the error message
+result = calculator.divide(45, 0)
+print("45 / 0 =", result)
+
+# ! hier duidelijk het verschil tussen gebruik van def__init__ en niet gebruik ervan.
