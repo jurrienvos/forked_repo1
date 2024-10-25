@@ -7,6 +7,8 @@
 --index-url https://repo-gtm.internal.ses.com/repository/pip/simple
 --trusted-host repo-gtm.internal.ses.com
 
+mpmath==1.3.0
+    # via sympy
 numpy==2.1.2
     # via
     #   -r requirements.in
@@ -21,5 +23,7 @@ pytz==2024.2
     # via pandas
 six==1.16.0
     # via python-dateutil
+sympy==1.13.3
+    # via -r requirements.in
 tzdata==2024.2
     # via pandas
