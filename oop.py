@@ -85,7 +85,6 @@ print(my_mens.human_traits())
 #############################################################################################################
 ###################### https://www.w3resource.com/python-exercises/oop/index.php ############################
 
-#1. Write a Python program to create a class representing a Circle. Include methods to calculate its area and perimeter
 #1. Write a Python program to create a class representing a Circle. Include methods to calculate its area and perimeter.
 
 import math
@@ -127,12 +126,6 @@ perimeter = circle.calculate_circle_perimeter()
 # Display the calculated area and perimeter of the circle
 print("Area of the circle:", area)
 print("Perimeter of the circle:", perimeter)
-
-
-
-
-
-
 
 #2. Write a Python program to create a person class. Include attributes like name, country and date of birth. Implement a method to determine the person's age.
 # dob=float(input("dob is: "))
