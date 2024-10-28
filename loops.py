@@ -96,6 +96,76 @@ def divisables(a):
     return x
 print(f'divisables={divisables(my_list)}')
 print(f'length of divisables={len(divisables(my_list))}')
+#In this corrected version, the return statement is executed only after the loop has checked all items in the list.
+#Now, it will correctly return the list of items that are divisible by both 7 and 5.
 
+
+
+
+
+
+
+##2. Write a Python program to convert temperatures to and from Celsius and Fahrenheit.
+#[ Formula : c/5 = f-32/9 [ where c = temperature in celsius and f = temperature in fahrenheit ]
+#Expected Output : #60°C is 140 in Fahrenheit, #45°F is 7 in Celsius
+
+#below strongly based on answer which I already saw:
+
+# temp=input("select temp: e.g. 45F, 60C: ")
+# value = int(temp[:-1])
+# celc_or_fahr=temp[-1]
+# print(f'celc_or_fahr= {celc_or_fahr}, type= {type(celc_or_fahr)}')
+# answer=[]
+# if celc_or_fahr == "f":
+#     c = 5*(value-32/9)
+#     answer.append(c)
+# elif celc_or_fahr == "c":
+#     f=value/5+32/9
+#     answer.append(f)
+# else:
+#     return "wrong input"
+#The issue with the return statement in your code is that it's used outside of a function.
+# The return statement is meant to be used inside a function to return a value.
+# Since your code does not define a function, you should use print() instead to display the error message.
+#So:
+# temp=input("select temp: e.g. 45F, 60C: ")
+# value = int(temp[:-1])
+# celc_or_fahr=temp[-1]
+# print(f'celc_or_fahr= {celc_or_fahr}, type= {type(celc_or_fahr)}')
+# answer=[]
+# if celc_or_fahr == "f":
+#     c = (5/9) * (value - 32)
+#     answer.append(c)
+# elif celc_or_fahr == "c":
+#     f=(value/(5/9))+32
+#     answer.append(f)
+# else:
+#     print("wrong input")
+# print(f'answer= {answer}')
+
+#answer:
+
+# Prompt the user to input a temperature in the format (e.g., 45F, 102C, etc.)
+temp = input("Input the temperature you like to convert? (e.g., 45F, 102C etc.) : ")
+# Extract the numerical part of the temperature and convert it to an integer
+degree = int(temp[:-1])
+# Extract the convention part of the temperature input (either 'C' or 'F')
+i_convention = temp[-1]
+# Check if the input convention is in uppercase 'C' (Celsius)
+if i_convention.upper() == "C":
+    # Convert the Celsius temperature to Fahrenheit
+    result = int(round((9 * degree) / 5 + 32))
+    o_convention = "Fahrenheit"  # Set the output convention as Fahrenheit
+# Check if the input convention is in uppercase 'F' (Fahrenheit)
+elif i_convention.upper() == "F":
+    # Convert the Fahrenheit temperature to Celsius
+    result = int(round((degree - 32) * 5 / 9))
+    o_convention = "Celsius"  # Set the output convention as Celsius
+else:
+    # If the input convention is neither 'C' nor 'F', print an error message and exit the program
+    print("Input proper convention.")
+    quit()
+# Display the converted temperature in the specified output convention
+print("The temperature in", o_convention, "is", result, "degrees.")
 
 
